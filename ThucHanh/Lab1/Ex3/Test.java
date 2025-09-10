@@ -68,11 +68,28 @@ public class Test {
         while (newNode != null) {
             newList.addLast(newNode.getData());
             newNode = newNode.getNext();
-        }   
+        }
 
         return newList;
     }
-    
+
+    public static int findMaximumNumber(MyLinkedList<Integer> list) {
+        if (list.isEmpty())
+            return 0;
+
+        Node<Integer> newNode = list.getHead();
+        int max = newNode.getData();
+        newNode = newNode.getNext();
+        while (newNode != null) {
+            if (newNode.getData() > max) {
+                max = newNode.getData();
+            }
+            newNode = newNode.getNext();
+        }
+
+        return max;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         MyLinkedList<Integer> list = new MyLinkedList<>();
@@ -97,6 +114,7 @@ public class Test {
         System.out.println("Add item X before the first even element: ");
         addXIntoList.print();
 
+        System.out.println("Maximum number in the list: " + findMaximumNumber(list));
         sc.close();
     }
 }
