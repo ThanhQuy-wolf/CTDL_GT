@@ -27,4 +27,8 @@ public class Node <E> {
     public void setNext(Node <E> curr) {
         next = curr;
     }
+
+    public void setData(E data) {
+        this.data = data;
+    }
 }
