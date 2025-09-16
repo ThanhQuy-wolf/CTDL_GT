@@ -1,6 +1,6 @@
-public class Node <E> {
+public class Node<E> {
     private E data;
-    private Node <E> next;
+    private Node<E> next;
 
     public Node() {
         data = null;
@@ -11,7 +11,7 @@ public class Node <E> {
         this(data, null);
     }
 
-    public Node(E data, Node <E> next) {
+    public Node(E data, Node<E> next) {
         this.data = data;
         this.next = next;
     }
@@ -20,11 +20,11 @@ public class Node <E> {
         return data;
     }
 
-    public Node <E> getNext() {
+    public Node<E> getNext() {
         return next;
     }
 
-    public void setNext(Node <E> curr) {
+    public void setNext(Node<E> curr) {
         next = curr;
     }
 
